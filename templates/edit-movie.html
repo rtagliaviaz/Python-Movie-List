@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="col-md-4 offset-md-4">
+  <div class="card card-body">
+    <form action="/update/{{ movie.0 }}" method='POST'>
+      <div class="form-group">
+        <input type="text" name="title" placeholder="Title" autofocus class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="genre" placeholder="Genre" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="year" placeholder="Year" class="form-control">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">Add</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
